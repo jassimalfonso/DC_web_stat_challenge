@@ -21,7 +21,7 @@ h1, p {
 /* Main content container properties */
 main {
     max-width: 428px;
-    min-width: 460px;
+    min-width: 500px;
     max-height: 944px;
     margin: 0 auto;
     padding: 8em 4em 0;
