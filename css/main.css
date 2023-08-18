@@ -1,0 +1,177 @@
+/* 62.5% technique to make easy use of 'em' and 'rem' units */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #181818;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, p {
+    margin: 0;
+}
+
+/* Transform top and middle card paragraphs to uppercase */
+.top-card p, .mid-card p {
+    text-transform: uppercase;
+}
+
+/* Main content container properties */
+main {
+    max-width: 428px;
+    min-width: 460px;
+    max-height: 944px;
+    margin: 0 auto;
+    padding: 8em 4em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8em;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Top card properties */
+.top-card {
+    font-weight: bold;
+    background-color: #7000FF;
+    /* width: 34.7em; */
+    width: 89%;
+    /* height: 18.9em; */
+    border-radius: 1em;
+    /* padding: 3.3em 12.9em 4.8em 4.7em; */
+    padding: 3.3em 0 4.8em 4.7em;
+    /* padding-bottom: 0; */
+}
+
+.top-card h1 {
+    font-size: 5.5rem;
+}
+
+.top-card p {
+    font-size: 1.8rem;
+}
+
+
+.mid-card {
+    /* width: 34.1em; */
+    width: 67%;
+    /* height: 29.5em; */
+    border: solid #2E2E2E;
+    border-radius: 1em;
+    padding: 5.6em 9.2em 5.7em 4.4em;
+    /* padding: 5.6em 0 5.7em 4.4em; */
+    /* padding-bottom: 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    /* justify-content: space-between; */
+}
+
+.mid-card h1 {
+    font-size: 3.2rem;
+    font-weight: bold;
+
+}
+
+.mid-card p {
+    font-size: 1.8rem;
+}
+
+.mid-card .content1, .mid-card .content2 {
+    display: flex;
+    gap: 1.2em;
+}
+
+.cta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2em;
+    align-items: center;
+}
+
+.cta-button {
+    /* width: 34.7em; */
+    background-color: #7000FF;
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 1.4em 0;
+    width: 100%;
+}
+
+.cta-button h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.bottom-note {
+    width: 19em;
+    font-size: 1.4rem;
+    /* font-weight: normal; */
+    color: #878787;
+    text-align: center;
+}
+
+.bottom-note span {
+    font-weight: bold;
+}
+
+/* Tablet Size */
+@media screen and (min-width: 1200px) {
+   main {
+    max-width: 1024px;
+    max-height: 623px;
+    height: 68vh;
+    padding: 13.7em 8em 12em 8em;
+    /* display: inline-flex; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+   }
+
+   .top-card {
+    width: 25%;
+   }
+
+   .mid-card {
+    flex-direction: row;
+    width: 53.8%;
+   }
+}
+
+/* Desktop Size */
+@media screen and (min-width: 1465px) {
+   main {
+    max-width: 1200px;
+    max-height: 481px;
+    /* height: 100vh; */
+    padding: 13em 12.3em 15.5em 12em;
+    flex-wrap: nowrap;
+   }
+
+   .top-card {
+    width: 30%;
+    padding-right: 5.3em;
+   }
+
+   .mid-card {
+    flex-direction: row;
+    width: 70%;
+   }
+
+   .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2em;
+    align-items: flex-start;
+    padding-bottom: 4.5em;
+    width: 40%;
+   }
+
+   .bottom-note {
+    width: 100%;
+    text-align: left;
+   }
+}
