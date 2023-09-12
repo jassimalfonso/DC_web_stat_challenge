@@ -3,12 +3,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    background-color: #181818;
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-}
-
 h1, p {
     margin: 0;
 }
@@ -18,31 +12,38 @@ h1, p {
     text-transform: uppercase;
 }
 
+body {
+    box-sizing: border-box;
+    background-color: #181818;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 auto;
+    width: 428px;
+    height: 100vh;
+    padding: 13.7em 4em;
+}
+
+
 /* Main content container properties */
 main {
-    max-width: 428px;
-    min-width: 400px;
-    max-height: 944px;
-    margin: 0 auto;
-    padding: 8em 4em 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2.8em;
     align-items: center;
     justify-content: center;
+    gap: 2.8em;
 }
 
 /* Top card properties */
 .top-card {
+    box-sizing: border-box;
     font-weight: bold;
     background-color: #7000FF;
-    /* width: 34.7em; */
-    width: 89%;
-    /* height: 18.9em; */
+    width: 100%;
+    height: 18.9em;
     border-radius: 1em;
-    /* padding: 3.3em 12.9em 4.8em 4.7em; */
-    padding: 3.3em 0 4.8em 4.7em;
-    /* padding-bottom: 0; */
+    padding: 3.3em 0 5em 4.7em;
 }
 
 .top-card h1 {
@@ -53,20 +54,15 @@ main {
     font-size: 1.8rem;
 }
 
-
 .mid-card {
-    /* width: 34.1em; */
-    width: 67%;
-    /* height: 29.5em; */
+    box-sizing: border-box;
+    width: 100%;
     border: solid #2E2E2E;
     border-radius: 1em;
-    padding: 5.6em 9.2em 5.7em 4.4em;
-    /* padding: 5.6em 0 5.7em 4.4em; */
-    /* padding-bottom: 0; */
+    padding: 5.6em 0 5.7em 4.4em;
     display: flex;
     flex-direction: column;
     gap: 4em;
-    /* justify-content: space-between; */
 }
 
 .mid-card h1 {
@@ -77,6 +73,7 @@ main {
 
 .mid-card p {
     font-size: 1.8rem;
+    font-weight: lighter;
 }
 
 .mid-card .content1, .mid-card .content2 {
@@ -88,17 +85,19 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2.2em;
     align-items: center;
+    gap: 2.2em;
 }
 
 .cta-button {
-    /* width: 34.7em; */
     background-color: #7000FF;
     font-weight: bold;
     border-radius: 1em;
-    padding: 1.4em 0;
     width: 100%;
+    height: 5.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cta-button h1 {
@@ -109,7 +108,6 @@ main {
 .bottom-note {
     width: 19em;
     font-size: 1.4rem;
-    /* font-weight: normal; */
     color: #878787;
     text-align: center;
 }
@@ -119,34 +117,68 @@ main {
 }
 
 /* Tablet Size */
-@media screen and (min-width: 1200px) {
-   main {
-    max-width: 1024px;
-    max-height: 623px;
-    height: 68vh;
-    padding: 13.7em 8em 12em 8em;
-    /* display: inline-flex; */
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-   }
+@media screen and (min-width: 1024px) {
+    body {
+        width: 1024px;
+    }
 
-   .top-card {
-    width: 25%;
-   }
+    main {
+        height: 36.34em;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+    }
 
-   .mid-card {
-    flex-direction: row;
-    width: 53.8%;
-   }
+    .top-card {
+        flex: 1 1 25%
+    }
+
+    .mid-card {
+        flex: 1 1 60%;
+        flex-direction: row;
+    }
 }
 
 /* Desktop Size */
-@media screen and (min-width: 1465px) {
-   main {
+@media screen and (min-width: 1440px) {
+    body {
+        width: 1440px;
+        padding: 13.7em 12em;
+    }
+    
+    main {
+        height: 19.3em;
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .top-card {
+        flex: 1 1 25%
+    }
+
+    .mid-card {
+        flex: 1 1 60%;
+        flex-direction: row;
+    }
+
+    .cta {
+        height: 100%;
+        flex: 1 1 25%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .bottom-note {
+        text-align: left;
+    }
+
+   /* main {
     max-width: 1200px;
     max-height: 481px;
-    /* height: 100vh; */
     padding: 13em 12.3em 15.5em 12em;
     flex-wrap: nowrap;
    }
@@ -173,5 +205,5 @@ main {
    .bottom-note {
     width: 100%;
     text-align: left;
-   }
+   } */
 }
